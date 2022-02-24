@@ -2,7 +2,7 @@
 
 We are a student game design team currently working on a 2D puzzle game called <placeholder>.
 
-### Our Team
+# Our Team
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
