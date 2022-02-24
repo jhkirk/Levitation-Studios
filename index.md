@@ -1,6 +1,6 @@
-# Welcome to <placeholder> studios
+# Welcome to Levitation Studios
 
-We are a student game design team currently working on a 2D puzzle game called <placeholder>.
+We are a student game design team currently working on a 2D puzzle game called.
 
 ## Our Team
   
