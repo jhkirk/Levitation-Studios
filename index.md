@@ -1,10 +1,8 @@
-## Welcome to GitHub Pages
+## Welcome to <placeholder> studios
 
-You can use the [editor on GitHub](https://github.com/jhkirk/csc4263/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+We are a student game design team currently working on a 2D puzzle game called <placeholder>.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
+### Our Team
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
