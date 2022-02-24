@@ -25,6 +25,19 @@ We are a student game design team currently working on a 2D puzzle game called <
 ### Sun Lee:
   - Level Design
   - Scripting
+  
+## Our Game
+  
+Our team is currently developing a 2D Platforming Puzzle game centered around the manipulation of gravity. In our early concepts, the game currently has the following features:
+  
+  1. Fast paced movement
+  2. Grappling hook for movement
+  3. Player-manipulated orbital forces
+  4. Obsticles and puzzles that players must navigate quickly with the tools at their disposal.
+  
+## Storyboard Sketches
+  
+  
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
