@@ -1,8 +1,30 @@
-## Welcome to <placeholder> studios
+# Welcome to <placeholder> studios
 
 We are a student game design team currently working on a 2D puzzle game called <placeholder>.
 
-# Our Team
+## Our Team
+  
+# Joshua Guillot:
+  - Team Lead
+  - Scripting
+  - Game Design
+  
+# Andrew Kimball:
+  - Asset Design
+  - Scripting
+  
+# Huey Kirk:
+  - UI Design
+  - Scripting
+  - Website Design
+
+# Jesse Chang: 
+  - Level Design
+  - Asset Design
+  
+#Sun Lee:
+  - Level Design
+  - Scripting
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
