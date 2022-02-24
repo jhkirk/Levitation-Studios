@@ -4,25 +4,25 @@ We are a student game design team currently working on a 2D puzzle game called <
 
 ## Our Team
   
-# Joshua Guillot:
+### Joshua Guillot:
   - Team Lead
   - Scripting
   - Game Design
   
-# Andrew Kimball:
+### Andrew Kimball:
   - Asset Design
   - Scripting
   
-# Huey Kirk:
+### Huey Kirk:
   - UI Design
   - Scripting
   - Website Design
 
-# Jesse Chang: 
+### Jesse Chang: 
   - Level Design
   - Asset Design
   
-#Sun Lee:
+### Sun Lee:
   - Level Design
   - Scripting
 
