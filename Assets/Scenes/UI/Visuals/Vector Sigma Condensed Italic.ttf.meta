@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2ada3ab0827d7c84a89d86ba14bba4cc
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Vector Sigma Condensed
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 96f086b706d8509429030550cf6402b9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
