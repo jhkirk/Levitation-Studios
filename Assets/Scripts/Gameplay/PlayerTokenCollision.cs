@@ -19,9 +19,10 @@ namespace Platformer.Gameplay
         public override void Execute()
         {
            // AudioSource.PlayClipAtPoint(token.tokenCollectAudio, token.transform.position);
-			model.player.GravDir *= -1;
-			
-			
+		   //model.player.GravDir = -1;
+		   //model.player.jumpState = JumpState.jummping;
+		   player.changeGravyState(token.type);
+               	
         }
     }
 }

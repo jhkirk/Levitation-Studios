@@ -9,7 +9,7 @@ namespace Platformer.Gameplay
     /// Fired when a player enters a gravity swap zone.
     /// </summary>
     /// <typeparam name="PlayerCollision"></typeparam>
-    public class PlayerEnteredSwapZone : Simulation.Event<PlayerEnteredSwapZone>
+    public class PlayerExitedSwapZone : Simulation.Event<PlayerExitedSwapZone>
     {
         public PlayerController player;
         public SwapZone swapzone;
@@ -18,9 +18,7 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            
-		   player.changeGravyState(swapzone.type);
-               	
+		   player.changeGravyState(swapzone.exitType);   	
         }
     }
 }

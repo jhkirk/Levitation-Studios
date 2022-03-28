@@ -6,20 +6,22 @@ using UnityEngine;
 namespace Platformer.Gameplay
 {
     /// <summary>
-    /// Fired when a player enters a gravity swap zone.
+    /// Fired when a player enters a spike hazard trigger.
     /// </summary>
     /// <typeparam name="PlayerCollision"></typeparam>
-    public class PlayerEnteredSwapZone : Simulation.Event<PlayerEnteredSwapZone>
+
+    public class PlayerEnteredSpikeHazard : Simulation.Event<PlayerEnteredSpikeHazard>
     {
         public PlayerController player;
-        public SwapZone swapzone;
+        public SpikeHazard spikezone;
+        public GameObject respawnPoint;
 
         PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public override void Execute()
         {
             
-		   player.changeGravyState(swapzone.type);
+		   player.Teleport(respawnPoint.transform.position);
                	
         }
     }

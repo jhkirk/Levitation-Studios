@@ -22,7 +22,7 @@ namespace Platformer.Gameplay
                 player.audioSource.PlayOneShot(player.jumpAudio);
 			}
 			
-			
+			//velocity.y = -velocity.y;
 			//rb = player.GetComponent<Rigidbody2D>();
 			//player.gravityModifier *= -1;
         }

@@ -169,9 +169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
-  GravDir: 1
   gravityModifier: 1
+  maxFallVelocity: 20
   velocity: {x: 0, y: 0}
+  gravState: 1
   jumpAudio: {fileID: 0}
   respawnAudio: {fileID: 0}
   ouchAudio: {fileID: 0}
