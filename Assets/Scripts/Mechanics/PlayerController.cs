@@ -17,7 +17,8 @@ namespace Platformer.Mechanics
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
-
+        public GameObject respawnPoint;
+		//public GravState gravState = GravState.Down;
         /// <summary>
         /// Max horizontal speed of the player.
         /// </summary>
@@ -26,7 +27,7 @@ namespace Platformer.Mechanics
         /// Initial jump velocity at the start of a jump.
         /// </summary>
         public float jumpTakeOffSpeed = 7;
-
+		 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
         /*internal new*/ public Collider2D collider2d;
@@ -41,24 +42,26 @@ namespace Platformer.Mechanics
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public Bounds Bounds => collider2d.bounds;
-
+		
 		private Rigidbody2D rb;
+
         void Awake()
         {
+			
 			defGravity = new Vector2(0, -9.8f);
             health = GetComponent<Health>();
             audioSource = GetComponent<AudioSource>();
             collider2d = GetComponent<Collider2D>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
-			rb = GetComponent<Rigidbody2D>();
+            spriteRenderer = GetComponent<SpriteRenderer>();	
         //    animator = GetComponent<Animator>();
         }
 
         protected override void Update()
         {
+			
             if (controlEnabled)
             {
-                move.x = Input.GetAxis("Horizontal");
+                move.x = Input.GetAxis("Horizontal") * controlswap; //move.x should be relative move.x
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
                     jumpState = JumpState.PrepareToJump;
                 else if (Input.GetButtonUp("Jump"))
@@ -88,7 +91,6 @@ namespace Platformer.Mechanics
                 case JumpState.Jumping:
                     if (!IsGrounded)
                     {
-						rb.gravityScale *= -1;
                         Schedule<PlayerJumped>().player = this;
                         jumpState = JumpState.InFlight;
                     }
@@ -108,9 +110,10 @@ namespace Platformer.Mechanics
 
         protected override void ComputeVelocity()
         {
+			
             if (jump && IsGrounded)
             {
-                velocity.y = jumpTakeOffSpeed * model.jumpModifier * GravDir;
+                velocity.y = jumpTakeOffSpeed * model.jumpModifier;
                 jump = false;
             }
             else if (stopJump)
@@ -132,7 +135,11 @@ namespace Platformer.Mechanics
 
             targetVelocity = move * maxSpeed;
         }
-
+		
+		public void changeGravyState(int a)
+        {
+			changeGravState(a);
+        }
         public enum JumpState
         {
             Grounded,

@@ -51,7 +51,7 @@ namespace Platformer.Mechanics
                     //if token is null, it has been disabled and is no longer animated.
                     if (token != null)
                     {
-                        token._renderer.sprite = token.sprites[token.frame];
+                      //  token._renderer.sprite = token.sprites[token.frame];
                         if (token.collected && token.frame == token.sprites.Length - 1)
                         {
                             token.gameObject.SetActive(false);

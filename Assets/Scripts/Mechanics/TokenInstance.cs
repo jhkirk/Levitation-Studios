@@ -20,10 +20,9 @@ namespace Platformer.Mechanics
         [Tooltip("If true, animation will start at a random position in the sequence.")]
         public bool randomAnimationStartTime = false;
 		
-		public bool ChangeRight = false;
-		public bool ChangeUp = false;
-		public bool ChangeDown = false;
-		public bool ChangeLeft = false;
+		public TokenType ttype;
+		internal int type;
+		public bool DestroyOnPickUp;
 		
         [Tooltip("List of frames that make up the animation.")]
         public Sprite[] idleAnimation, collectedAnimation;
@@ -45,6 +44,21 @@ namespace Platformer.Mechanics
             if (randomAnimationStartTime)
                 frame = Random.Range(0, sprites.Length);
             sprites = idleAnimation;
+			switch (ttype)
+            {
+                case TokenType.UpToken:
+                    type = 1;
+                    break;
+                case TokenType.DownToken:
+					type = 2;
+                    break;
+                case TokenType.LeftToken:
+                    type = 3;
+                    break;
+                case TokenType.RightToken:
+                    type = 4;
+                    break;
+			}
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -61,20 +75,19 @@ namespace Platformer.Mechanics
             //frame = 0;
             //sprites = collectedAnimation;
             if (controller != null)
-                collected = true;
+                collected = DestroyOnPickUp; //changed this
             //send an event into the gameplay system to perform some behaviour.
             var ev = Schedule<PlayerTokenCollision>();
             ev.token = this;
             ev.player = player;
-			gameObject.SetActive(false);
+			gameObject.SetActive(!DestroyOnPickUp);
         }
 		    public enum TokenType
         {
-            Grounded,
-            PrepareToJump,
-            Jumping,
-            InFlight,
-            Landed
+            UpToken,
+            DownToken,
+            LeftToken,
+            RightToken
         }
 		
 		
