@@ -9,8 +9,6 @@ namespace Platformer.Mechanics
     public class SpikeHazard : MonoBehaviour
     {
 
-        public GameObject respawnPoint;
-
         void Awake()
         {
 
@@ -27,7 +25,7 @@ namespace Platformer.Mechanics
             var ev = Schedule<PlayerEnteredSpikeHazard>();
             ev.spikezone = this;
             ev.player = player;
-            ev.respawnPoint = this.respawnPoint;
+            ev.respawnPoint = player.respawnPoint;
         }
     }
 }

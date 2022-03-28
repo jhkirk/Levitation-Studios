@@ -17,6 +17,7 @@ namespace Platformer.Mechanics
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
+        public GameObject respawnPoint;
 		//public GravState gravState = GravState.Down;
         /// <summary>
         /// Max horizontal speed of the player.
